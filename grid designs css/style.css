@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  min-height: 90vh;
+  /* padding: 0 16px; */
+  width: 100%;
+  background-color: #e6e6f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+main {
+  background-color: #fff;
+  max-width: 600px;
+  margin-inline: auto;
+  /* padding: 32px; */
+  border-radius: 16px;
+  margin: 32px 16px;
+  /* We dont give width by hardcoding we give flexible width. max-width ensure that maximum width will be 500px on any device but if the device size is small then it will automatically adjust the size. 
+  after giving margin inline auto it will automatically center the item.
+  
+  
+  */
+}
+
+.what {
+  margin: 0;
+  padding-bottom: 16px;
+  font-weight: 600;
+  color: rgb(125, 30, 125);
+}
+
+.para {
+  margin: 0;
+  font-size: 15px;
+  color: rgb(125, 30, 125);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.image-grid {
+  display: grid;
+  grid-gap: 10px;
+  /* height: 200px; */
+  /* 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  column-gap: 16px;
+}
+
+img {
+  /* object-fit: cover;
+    object-position: center; */
+  width: 100%;
+}
+
+.image-2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.image-3 {
+  align-self: end;
+}
+/* 
+
+Grid display the div into diffrent boxes.
+it requires these four lines just to show that grid is applied.
+ display: grid;
+    height: 200px;
+    grid-template-columns: 1fr 1fr ; here it is dividing the div into 4 parts 
+    grid-template-rows: 1fr 1fr  ; here it is dividing the div into 4 parts 
+
+
+*/
+
+@media (max-width: 400px) {
+
+    .image-grid{
+        row-gap: 16px;
+    }
+
+  .image-2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
